@@ -6,7 +6,11 @@
  */
 
 function swapVariables(a, b) {
-  //Escribe tu codigo aqui
+  let c = a;
+  a = b;
+  b = c;
+
+  return `${a} ${b}` 
 }
 
 module.exports = { swapVariables };
