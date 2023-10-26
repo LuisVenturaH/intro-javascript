@@ -5,8 +5,28 @@
  * Recuerda usar la estructura condicional If.
  */
 
-function compareThreeNumbers() {
-//Escribe tu codigo aqui
+   let num1 = 1;
+   let num2 = 2;
+   let num3 = 3;
+
+function compareThreeNumbers(num1, num2, num3) {
+
+   if (num1 == num2 && num2== num3) {
+      return "iguales";
+     }
+     else if (num1 > num2 && num1 > num3) {
+      return num1;
+     }
+     else if (num2 > num3) {
+      return num2;
+     }
+     else {
+      return num3;
+     }
 }
+
+
+
+//npm test  ejercicio03/ejercicio03.test.js
 
 module.exports = { compareThreeNumbers };

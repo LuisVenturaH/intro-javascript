@@ -5,8 +5,15 @@
  *  El algoritmo debera retornar el nuevo salario.
  */
 
-function incrementarSueldo() {
- //Escribe tu codigo aqui
+let salario = 1000;
+
+function incrementarSueldo(salario) {
+ if (salario < 999.99) {
+    return salario * 1.15;
+ }
+ else if (salario >= 1000) {
+    return salario;
+ }
 }
 
 module.exports = { incrementarSueldo };

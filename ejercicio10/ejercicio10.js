@@ -12,9 +12,30 @@
  *  El algoritmo debera retornar el nuevo salario. Ten en cuenta que el sueldo del
  *  trabajador podria no entrar en ninguna categoria.
  */
+let sueldo = 1000;
+let categoria = 0;
+// let cat1 = sueldo;
+// let cat2 = sueldo;
+// let cat3 = sueldo;
+// let cat4 = sueldo;
 
-function nuevoSalario() {
-  //Escribe tu codigo aqui
+function nuevoSalario(sueldo, categoria) {
+  
+ if (categoria == 1) {
+    return sueldo * 1.15;
+  }
+  else if (categoria == 2) {
+    return sueldo * 1.10;
+  }
+  else if (categoria == 3) {
+    return sueldo * 1.06;
+  }
+  else if (categoria == 4) {
+    return sueldo * 1.03;
+  }
+  else {
+    return sueldo;
+  }
 }
 
 module.exports = { nuevoSalario };
