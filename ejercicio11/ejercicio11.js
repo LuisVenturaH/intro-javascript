@@ -12,19 +12,29 @@
  *  El algoritmo recibira la cantidad y retornara el precio final aplicandole el
  *  descuento correspondiente.
  */
-let Descuento = 0;
-// let descuento5 = 0.05;
-// let descuento10 = 0.10;
-// let descuento20 = 0.20;
-// let descuentoMax = 0.25;
+let noDescuento = 0;
+let descuento5 = 0.05;
+let descuento10 = 0.10;
+let descuento20 = 0.20;
+let descuentoMax = 0.25;
 let monto = 500;
 
-function descuentoCompra(monto, Descuento) {
-  if (monto < 500) {
+function descuentoCompra(monto) {
+  if (monto <= 500) {
     return monto;
   }
-  else if (monto >= 500 || monto <= 1000 ) {
-    return monto*1.10;
+  else if (monto > 500 && monto <= 1000 ) {
+    monto = monto*0.95;
+    return monto;
+  }
+  else if (monto > 1000.01 && monto <= 7000) {
+    return monto*0.90;
+  }
+  else if (monto > 7000.01 && monto <= 15000) {
+    return monto*0.80;
+  }
+  else {
+    return monto*0.75;
   }
 }
 
