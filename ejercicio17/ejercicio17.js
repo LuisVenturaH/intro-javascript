@@ -5,8 +5,23 @@
  *  La funcion retornara la suma.
  */
 
+
+// function calcularSumaNumerosNaturales(N) {
+//   let suma = 0;
+//   for (let i=1; i<=N; i++) {
+//     suma += i; // Es lo mismo que suma = suma +i.
+   
+//   }  return suma;
+// }
+// calcularSumaNumerosNaturales(5);
+
 function calcularSumaNumerosNaturales(N) {
-  //Escribe tu codigo aqui
+  let suma = 0;
+  for (i=1; i<=N; i++) {
+    suma += i;
+
+  } return suma;
 }
 
+calcularSumaNumerosNaturales(5);
 module.exports = { calcularSumaNumerosNaturales };
