@@ -5,13 +5,12 @@
  *  El algoritmo debera retornar el nuevo salario.
  */
 
-let salario = 1000;
 
 function incrementarSueldo(salario) {
  if (salario < 999.99) {
     return salario * 1.15;
  }
- else if (salario >= 1000) {
+ else {
     return salario;
  }
 }

@@ -6,21 +6,12 @@
  */
 
 
-// function calcularSumaNumerosNaturales(N) {
-//   let suma = 0;
-//   for (let i=1; i<=N; i++) {
-//     suma += i; // Es lo mismo que suma = suma +i.
-   
-//   }  return suma;
-// }
-// calcularSumaNumerosNaturales(5);
-
-function calcularSumaNumerosNaturales(N) {
+function calcularSumaNumerosNaturales (n) {
   let suma = 0;
-  for (i=1; i<=N; i++) {
+  for (i = 0; i <= n; i++) {
     suma += i;
-
-  } return suma;
+  }
+  return suma;
 }
 
 calcularSumaNumerosNaturales(5);

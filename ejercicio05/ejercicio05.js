@@ -5,21 +5,21 @@
  *  Debes tener en cuenta la opcion de que no se introduzca un
  *  numero.
  */
-let numero = 50;
 
-function determinarTipoNumero(numero) {
-if (numero > 0) {
+function determinarTipoNumero (a) {
+   if (isNaN(a)) {
+      return "No has introducido un numero";
+   }
+   else if (a == null) {
+      return "El numero es nulo";
+   }
+   else if (a < 0) {
+      return "El numero es negativo";
+   }
+   else {
       return "El numero es positivo";
    }
- else if (isNaN(numero)) {
-    return "No has introducido un numero";
- }
- else if (numero == null) {
-   return "El numero es nulo";
 }
-else {
-    return "El numero es negativo";
- }
-}
+
 
 module.exports = { determinarTipoNumero };

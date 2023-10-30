@@ -7,26 +7,18 @@
  *  diciendo 'Debes introducir sólo números. Inténtalo de nuevo'
  */
   
-let nota1 = 5;
-let nota2 = 5;
-let nota3 = 5;
-let nota4 = "f";
-let nota5 = 5;
+function notaMedia (a, b, c, d, e) {
+  let promedio = ((a + b + c + d + e)/5);
 
-
-
-function notaMedia(nota1, nota2, nota3, nota4, nota5) {
-let promedio = (nota1 + nota2 + nota3 + nota4 + nota5)/5;
-
-if (isNaN(nota1) || isNaN(nota2) || isNaN(nota3) || isNaN(nota4) || isNaN(nota5)) {
+  if (isNaN(promedio)) {
     return "Debes introducir solo numeros. Intentalo de nuevo";
-} 
-  if (promedio >= 5) {
+  }
+  else if (promedio >= 5) {
     return `${promedio} aprobado`;
   }
-    else {
-    return `${promedio} suspenso`;  
+  else {
+    return `${promedio} suspenso`;
+  }
 }
-} 
 
 module.exports = { notaMedia };

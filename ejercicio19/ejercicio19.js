@@ -5,8 +5,41 @@
  *  el usuario no insertará numeros negativos.
  */
 
-function mediaArrayHastaMenosUno() {
-  //Escribe tu codigo aqui
-}
+  function mediaArrayHastaMenosUno (indefinido) {
+    for (i = 0; i < indefinido.length; i++) {
+      if () {
+        
+      }
+    }
+ }
 
+
+
+
+
+
+
+
+
+
+
+
+
+// function mediaArrayHastaMenosUno(indefinido) {
+//     let suma = 0;
+//     let contador = 0;
+    
+//   for (let i = 0; i < indefinido.length; i++) {
+//     if (indefinido[i] == -1) {
+//      break;
+//     }
+//     suma += indefinido[i];
+//     contador++;  
+   
+//   } 
+//      return suma / contador;
+  
+//   }
+
+// mediaArrayHastaMenosUno([6, 6, 6, 6, -1]);
 module.exports = { mediaArrayHastaMenosUno };

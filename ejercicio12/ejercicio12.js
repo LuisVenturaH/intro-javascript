@@ -11,9 +11,6 @@
 // Como el aparato para medir los sonidos puede fallar, tener en cuenta que si
 // el numero de sonidos es 0, es un error y debe de imprimir error.
 
-
-
-
 function temperaturaGrillo(n) {
 let t = n / 4 + 40;
   if (n > 0) { 

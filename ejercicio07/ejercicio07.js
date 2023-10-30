@@ -6,9 +6,6 @@
  *  una cantidad de dinero insuficiente.
  */
 
-let coste = 1000;
-let pago = 500;
-
 function cambioCliente(pago, coste) {
  if (pago >= coste) {
     return pago - coste;

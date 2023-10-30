@@ -10,8 +10,26 @@
  *  del programa.
  */
 
-function adivinarContrasena() {
-  //Escribe tu codigo aqui
+function adivinarContrasena(Clave) {
+  let password= "eureka";
+  let intentos = 0;
+
+  // for (i = 0; i < 3; i++) {
+  //     if (Clave[i] == password) {
+  //     console.log("Contraseña correcta, bienvenido") ; 
+  //     }
+  //      if (Clave[i] != password) {
+  //   console.log("Contraseña incorrecta, intentelo de nuevo");
+  //   intentos++
+  // } 
+  // if (intentos[i] == 3) {
+  //   console.log("Has agotado tus intentos");
+  //   break;
+  // }
+  // } 
+ 
+
 }
+
 
 module.exports = { adivinarContrasena };

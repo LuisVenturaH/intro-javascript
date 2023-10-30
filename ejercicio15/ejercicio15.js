@@ -9,18 +9,16 @@
              */
 
 
-let numero = 3;
-
-function parImparNulo(numero) {
-
-while (numero == 0) {
-  return "Introduce otro numero";
-}
-  if (numero % 2) {
-      return "El numero es impar";}
-  else {
-    return "El numero es par";
- }
+function parImparNulo (a) {
+  while (a == 0) {
+    return "Introduce otro numero";
+  }
+    if (a % 2 == 0) {
+      return "El numero es par";
+    }
+    else {
+      return "El numero es impar";
+    }
 }
 
 module.exports = { parImparNulo };

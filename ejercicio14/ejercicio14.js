@@ -9,14 +9,12 @@
  *  1 galon = 3,78541 litros
  */
 
-let LitroGas = 1.333;
-let galonGas = 1.333*3.78541; 
-let suministro = 40;
-
 function precioEnLitros(suministro) {
-  let aCobrar = galonGas * suministro;
-  return aCobrar;
-  
+  let precioLitros = 1.333;
+  let precioGalones = precioLitros * 3.78541;
+
+  return suministro * precioGalones;
 }
+
 
 module.exports = { precioEnLitros };

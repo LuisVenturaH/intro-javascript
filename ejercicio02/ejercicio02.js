@@ -5,20 +5,35 @@
  */
 
 function sum(a, b) {
-    return a + b; //Escribe tu codigo aqui
+    return a + b;
 }
 
 function substract(a, b) {
-    return a - b; //Escribe tu codigo aqui
+    return a - b;
 }
 
-function multiply(a, b) {
-    return a * b; //Escribe tu codigo aqui
+function multiply (a, b) {
+    return a * b;
+}
+function divide (a, b) {
+    return a / b;
 }
 
-function divide(a, b) {
-    return a / b; //Escribe tu codigo aqui
-}
+// function sum(a, b) {
+//     return a + b; //Escribe tu codigo aqui
+// }
+
+// function substract(a, b) {
+//     return a - b; //Escribe tu codigo aqui
+// }
+
+// function multiply(a, b) {
+//     return a * b; //Escribe tu codigo aqui
+// }
+
+// function divide(a, b) {
+//     return a / b; //Escribe tu codigo aqui
+// }
 
 function total(a, b) {
     return sum(a, b) + substract(a, b) + multiply(a, b) + divide(a, b);
