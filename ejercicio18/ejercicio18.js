@@ -19,4 +19,34 @@ function sumaNPrimerosNumerosPares(N) {
     return suma;
  }
 
+/* OPCION DE LUCAS
+function sumaNPrimerosNumerosPares(n) {
+  let suma = 0;
+  let contador = 0;
+  let i = n;
+  while (contador < n) {
+    if (i % 2 == 0) {
+      suma += i;
+      contador++;
+    }
+    i++;
+    //return `contador es ${contador}, i es ${i} y suma es ${suma}`
+  }
+  return suma;
+}
+*/ 
+
+/*
+
+OPCION ISRAEL
+  const N 10 11;
+ let suma = 0;
+ 
+ for (let i=0; i <N; i++) {
+ suma += N + (N % 2) + (i * 2);
+}
+ 
+ */
+
+
 module.exports = { sumaNPrimerosNumerosPares };

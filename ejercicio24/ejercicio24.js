@@ -14,7 +14,20 @@
  */
 
 function notaAlumno() {
-  //Escribe tu codigo aqui
+  let alumno = "Luis";
+  let practica = notaPractica * 0.10;
+  let problemas = notaProblemas * 0.50;
+  let teroria = notaTeoria * 0.40;
+  let notaPractica = 8;
+  let notaProblemas = 6;
+  let notaTeoria = 5;
+
+  while (notaPractica < 0 || notaPractica > 10 || notaProblemas < 0 || notaProblemas > 0 || notaTeoria < 0 || notaTeoria > 0) {
+    console.log("Ha habido un error con tus notas. Deben estar entre 1 y 10");
+  }
+  if () {
+    
+  }
 }
 
 module.exports = { notaAlumno };
