@@ -13,21 +13,22 @@
  *  Si todo es correcto el algorimo debera imprimir 'NombreAlumno tu nota final es de NotaFinal sobre 10'
  */
 
-function notaAlumno() {
-  let alumno = "Luis";
-  let practica = notaPractica * 0.10;
-  let problemas = notaProblemas * 0.50;
-  let teroria = notaTeoria * 0.40;
-  let notaPractica = 8;
-  let notaProblemas = 6;
-  let notaTeoria = 5;
+function notaAlumno(alumno, notaPractica, notaProblemas, notaTeoria) {
+ 
+  let notaMedia = notaPractica * 0.10 + notaProblemas * 0.50 + notaTeoria * 0.40;
 
-  while (notaPractica < 0 || notaPractica > 10 || notaProblemas < 0 || notaProblemas > 0 || notaTeoria < 0 || notaTeoria > 0) {
-    console.log("Ha habido un error con tus notas. Deben estar entre 1 y 10");
+    if (!alumno) {
+    return "Error al recibir el nombre";
   }
-  if () {
-    
+    if (notaPractica < 0 || notaPractica > 10 || 
+      notaProblemas < 0 || notaProblemas > 10 || 
+      notaTeoria < 0 || notaTeoria > 10) {
+      return "Ha habido un error con tus notas. Deben estar entre 1 y 10"; 
   }
+    else {
+      return `${alumno} tu nota final es de ${notaMedia} sobre 10`;
+  }
+  
 }
 
 module.exports = { notaAlumno };

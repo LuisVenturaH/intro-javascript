@@ -11,8 +11,27 @@
  *
  *  La funcion debera retornar cada linea + un espacio en blanco '\n';
  */
-function crearCuadrado() {
-  //Escribe tu codigo aqui
+
+
+function crearCuadrado(lado) {
+  if (lado <= 0) {
+    return;
+  }
+
+  for (let i = 1; i <= lado; i++) {
+    let linea = "";
+    for (let j = 1; j <= lado; j++) {
+      if (i == 1 || i == lado || j == 1 || j == lado) {
+        linea = "* ";
+      }
+      else {
+        linea += " ";
+      }
+    }
+    console.log(linea);
+  }
+
 }
+
 
 module.exports = { crearCuadrado };
