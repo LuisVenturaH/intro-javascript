@@ -10,36 +10,39 @@
  *  del programa.
  */
 
-
 function adivinarContrasena(array, password) {
  
-  // let intentos = 1;
+  let intentos = 0;
 
-  // while (intentos <= 3) {
-  //   if (array == password) {
-  //     console.log("Contraseña correcta, bienvenido");
-  //     return; // Para salir del programa
-  //   } else {
-  //     console.log("Contraseña incorrecta, intentelo de nuevo");
-  //     intentos++;
-  //   }
-  //   console.log("Has agotado tus intentos");
-  //   return; // Para salir del programa
-  // }
-
-
-  // CON BUCLE FOR (REPARAR, ME DA ERROR)
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] != password){
-      console.log("Contraseña incorrecta, intentelo de nuevo");
-    } 
-    else  {
+  while (intentos < 3) {
+    if (array == password) {
       console.log("Contraseña correcta, bienvenido");
-      return; // Sale del programa
-    }  
-       console.log("Has agotado tus intentos");
-       return;
+      return; // Para salir del programa
+    } 
+      else {
+      console.log("Contraseña incorrecta, intentelo de nuevo");
+      intentos++;
     }
-  } 
+    console.log("Has agotado tus intentos");
+    return; // Para salir del programa
+  }
+}
 
+
+  // CON BUCLE FOR (ME DA ERROR)
+  // function adivinarContrasena(array, password) { 
+  // for (let i = 0; i < array.length; i++) {
+  //   if (array[i] != password){
+  //     console.log("Contraseña incorrecta, intentelo de nuevo");
+
+  //   } 
+  //   else  {
+  //     console.log("Contraseña correcta, bienvenido");
+  //     break; // Sale del programa
+  //   }  
+  //      console.log("Has agotado tus intentos");
+  //      break;
+  //   }
+  // }
 module.exports = { adivinarContrasena };
+

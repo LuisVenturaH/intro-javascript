@@ -5,44 +5,38 @@
  *  ellos. Piensa como debemos inicializar las variables.
  */
 
-  let array = [2, 4, 6, 8, 0, 1];
-  let datos = { 
-    average: 2,
-    max: 3,
-    min: 1, 
-  };
-  let average = array[0];
-  let max = array[0];
-  let min = array[0];
-function maxMinAverageUntilZero() {
+
+
+function maxMinAverageUntilZero(array) {
+  let nuevoArray = [];
+  let suma = 0;
+  let maximo = -Infinity;
+  let minimo = Infinity;
 
   for (let i = 0; i < array.length; i++) {
     if (array[i] == 0) {
-      array[i] > max;
-      max += array[i];
-      datos.max = max;
+      break;
     }
-    return datos.max;
-  }
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] == 0) {
-      array[i] < min;
-      min += array[i];
-      datos.min = min;
+    nuevoArray.push(array[i]);
+    suma += array[i];
+      if (array[i] > maximo) {
+        maximo = array[i];
+      }
+      if (array[i] < minimo) {
+        minimo = array[i];
+      }
     }
-    return datos.min;
-  }
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] == 0) {
-      average = array[i] / array.length;
-      datos.average = average;
+    const media = suma / nuevoArray.length;
+    
+      const objeto = {
+        average: media,
+        max: maximo,
+        min: minimo,
     }
-  }
-  return datos.average;
-} 
+    
+    return objeto;
 
-console.log(datos);
-
+}
 
 
 module.exports = { maxMinAverageUntilZero };
