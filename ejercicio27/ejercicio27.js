@@ -7,13 +7,14 @@
 
 
 
-function tablaNumero(numero) {
+function tablaNumero(N) {
   let multiplicar = 0;
-  numero = 5;
-  for (let i = 0; i <= 10; i++) {
-    multiplicar = numero * i;
-    
-  } return multiplicar;
-}
+  for (let i = 1; i <=10; i++ ) {
+    multiplicar = N * i;
+    return multiplicar;
+  }
  
+}
+
+
 module.exports = { tablaNumero };
