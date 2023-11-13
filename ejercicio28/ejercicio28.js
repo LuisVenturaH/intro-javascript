@@ -7,7 +7,7 @@
  */
 
 function timer(segundos) {
-  for (let i = segundos - 1; i >= 0; i--) {
+  for (let i = segundos; i >= 0; i--) {
      if (i == 0) {
     console.log("¡¡Ring!!");
   } else {

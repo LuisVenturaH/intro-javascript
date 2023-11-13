@@ -12,8 +12,13 @@
  *  Deberas recordar la concatenacion y el uso de espacio en blanco (\n)
  */
 
-function crearTriangulo() {
-  //Escribe tu codigo aqui
+function crearTriangulo(altura) {
+  let escalera = "";
+  
+  for (let i = altura; i >= 1; i--) {
+    escalera += "*".repeat(i) + "\n";
+  }
+  return escalera;
 }
 
 module.exports = { crearTriangulo };

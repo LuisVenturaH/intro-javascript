@@ -10,60 +10,56 @@
  *  El año debe ser mayor que 0. (Recuerda la estructura switch).
  */
  
-function obtenerNombreMes (numero) {
-  let nombreMes;  
-switch (numero) {
+
+function fechaIntroducida (dia, mes, ano) {
+
+  if (ano <= 0 || dia < 1 || dia > 31 || mes < 1 || mes > 12) {
+    console.log('Has introducido mal alguna parte de la fecha');
+    return;
+  } 
+
+  let nombreMes = ""; 
+  switch (mes) {
     case 1:
-      nombreMes = "enero";
+      nombreMes = "enero"; break;
     case 2:
-      nombreMes ="febrero";
+      nombreMes ="febrero"; 
+      if (ano % 4 == 0 && ano % 100 != 0 || ano % 400 == 0) {
+        return `${dia} de ${nombreMes} del ${ano}`;
+      } else {
+        return dia <=28 ? `${dia} de ${nombreMes} del ${ano}` : 'Has introducido mal alguna parte de la fecha';
+      }    
     case 3:
-      nombreMes = "marzo";
+      nombreMes = "marzo"; break;
     case 4:
-      nombreMes = "abril";
+      nombreMes = "abril"; break;
     case 5:
-      nombreMes = "mayo";
+      nombreMes = "mayo"; break;
     case 6:
-      nombreMes = "junio";
+      nombreMes = "junio"; break;
     case 7:
-      nombreMes = "julio";
+      nombreMes = "julio"; break;
     case 8:
-      nombreMes = "agosto";
+      nombreMes = "agosto"; break;
     case 9:
-      nombreMes = "septiembre";
+      nombreMes = "septiembre"; break;
     case 10:
-      nombreMes = "octubre";
+      nombreMes = "octubre"; break;
     case 11:
-      nombreMes = "noviembre";
+      nombreMes = "noviembre"; break;
     case 12:
-      nombreMes = "diciembre";    
+      nombreMes = "diciembre";   break; 
+    default:
+      console.log('Has introducido mal alguna parte de la fecha');
+      return;
 } 
-    return nombreMes;
-}
 
-const mes = obtenerNombreMes(numero);
-
-function fechaIntroducida(dia, mes, ano) {
-dia = 0;
-ano = 0;
-mes = 0;
-
-
-if (dia < 1 || dia > 31 || mes < 1 || mes > 12 || ano <= 0) {
-    return "Has introducido mal alguna parte de la fecha";
-} if (mes == 2) {
-    if (ano % 4 == 0 & ano % 100 != 0 || ano % 400 == 0) { 
-    return dia <= 29;
-    } else { 
-    dia <=28;
-}
+    if ((mes == 4 || mes == 6 || mes == 9 || mes == 11) && dia > 30) {
+      console.log("Has introducido mal alguna parte de la fecha");
+      return;
     }
-    else if (mes == 4 || mes == 6 || mes == 9 || mes == 11) {
-    return dia <= 30;
-  }
-    return `${dia} de ${nombreMes} del ${ano}`;
+
+    return `${dia} de ${nombreMes} del ${ano}`
 }
-
-
 
 module.exports = { fechaIntroducida };
