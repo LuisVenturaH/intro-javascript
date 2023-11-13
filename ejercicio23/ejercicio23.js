@@ -64,9 +64,6 @@ switch (mes) {
 
 }
 
-fechaIntroducida(1, 7, 2001);
-console.log(`${dia} de ${mes} del ${ano}`)
-
 
 
 module.exports = { fechaIntroducida };

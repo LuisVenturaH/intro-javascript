@@ -33,5 +33,4 @@ function crearCuadrado(lado) {
 
 }
 
-
 module.exports = { crearCuadrado };
