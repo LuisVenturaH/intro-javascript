@@ -1,6 +1,7 @@
 /**
  *  Ejercicio 25
- *  Algoritmo que lea un número entero (lado) y a partir de él cree un cuadrado de asteriscos con ese tamaño.
+ *  Algoritmo que lea un número entero (lado) y a partir de él cree un cuadrado de asteriscos 
+ * con ese tamaño.
  *  Los asteriscos sólo se verán en el borde del cuadrado, no en el interior.
  *  Ejemplo, para lado = 4 escribiría:
  *  * * * *
@@ -14,23 +15,28 @@
 
 
 function crearCuadrado(lado) {
-  if (lado <= 0) {
-    return;
-  }
 
-  for (let i = 1; i <= lado; i++) {
-    let linea = "";
-    for (let j = 1; j <= lado; j++) {
-      if (i == 1 || i == lado || j == 1 || j == lado) {
-        linea = "* ";
+    let cuadrado = '';
+  
+    for (let i = 0; i < lado; i++) {
+      for (let j = 0; j < lado; j++) {
+        // Verificamos si estamos en el borde del cuadrado
+        if (i == 0 || i == lado - 1 || j == 0 || j == lado - 1) {
+          cuadrado += '*';
+        } else {
+          cuadrado += ' ';
+        }
       }
-      else {
-        linea += " ";
-      }
+      // Agregamos un salto de línea al final de cada fila
+      cuadrado += '\n';
     }
-    console.log(linea);
-  }
-
+  
+    return cuadrado;
 }
 
 module.exports = { crearCuadrado };
+
+/* 
+Lado es 5.
+i = 0 - falso
+*/

@@ -10,58 +10,58 @@
  *  El año debe ser mayor que 0. (Recuerda la estructura switch).
  */
  
-let dia = 0;
-let mes = 0;
-let ano = 0;
+function obtenerNombreMes (numero) {
+  let nombreMes;  
+switch (numero) {
+    case 1:
+      nombreMes = "enero";
+    case 2:
+      nombreMes ="febrero";
+    case 3:
+      nombreMes = "marzo";
+    case 4:
+      nombreMes = "abril";
+    case 5:
+      nombreMes = "mayo";
+    case 6:
+      nombreMes = "junio";
+    case 7:
+      nombreMes = "julio";
+    case 8:
+      nombreMes = "agosto";
+    case 9:
+      nombreMes = "septiembre";
+    case 10:
+      nombreMes = "octubre";
+    case 11:
+      nombreMes = "noviembre";
+    case 12:
+      nombreMes = "diciembre";    
+} 
+    return nombreMes;
+}
+
+const mes = obtenerNombreMes(numero);
+
 function fechaIntroducida(dia, mes, ano) {
-  
+dia = 0;
+ano = 0;
+mes = 0;
+
+
 if (dia < 1 || dia > 31 || mes < 1 || mes > 12 || ano <= 0) {
     return "Has introducido mal alguna parte de la fecha";
-}
-if (mes == 2) {
+} if (mes == 2) {
     if (ano % 4 == 0 & ano % 100 != 0 || ano % 400 == 0) { 
     return dia <= 29;
-} 
-    else { 
+    } else { 
     dia <=28;
 }
-}
+    }
     else if (mes == 4 || mes == 6 || mes == 9 || mes == 11) {
     return dia <= 30;
   }
-    return "Has introducido mal alguna parte de la fecha";
-}
-
-function nombreMes () {
-switch (mes) {
-    case 1:
-      return "enero";
-    case 2:
-      return "febrero";
-    case 3:
-      return "marzo";
-    case 4:
-      return "abril";
-    case 5:
-      return "mayo";
-    case 6:
-      return "junio";
-    case 7:
-      return "julio";
-    case 8:
-      return "agosto";
-    case 9:
-      return "septiembre";
-    case 10:
-      return "octubre";
-    case 11:
-      return "noviembre";
-    case 12:
-      return "diciembre";
-    default:
-      return "Has introducido mal alguna parte de la fecha";      
-}
-
+    return `${dia} de ${nombreMes} del ${ano}`;
 }
 
 

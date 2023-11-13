@@ -10,39 +10,39 @@
  *  del programa.
  */
 
-function adivinarContrasena(array, password) {
+// function adivinarContrasena(array, password) {
  
-  let intentos = 0;
+//   let intentos = 0;
 
-  while (intentos < 3) {
-    if (array == password) {
+//   while (intentos < 3) {
+//     if (array == password) {
+//       console.log("Contraseña correcta, bienvenido");
+//       console.log(intentos);
+//     } 
+//       else {
+//       console.log("Contraseña incorrecta, intentelo de nuevo");
+//       intentos++;
+//       console.log(intentos);
+//     }
+//     console.log("Has agotado tus intentos");
+//     console.log(intentos);
+//   }
+// }
+
+  // CON BUCLE FOR (TAMBIEN ME DA ERROR)
+  function adivinarContrasena(array, password) { 
+    
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] == password){
       console.log("Contraseña correcta, bienvenido");
-      return; // Para salir del programa
+      return; // Sale del programa
     } 
-      else {
+    else  {
       console.log("Contraseña incorrecta, intentelo de nuevo");
-      intentos++;
     }
-    console.log("Has agotado tus intentos");
-    return; // Para salir del programa
+    }  
+       console.log("Has agotado tus intentos");
+
   }
-}
-
-
-  // CON BUCLE FOR (ME DA ERROR)
-  // function adivinarContrasena(array, password) { 
-  // for (let i = 0; i < array.length; i++) {
-  //   if (array[i] != password){
-  //     console.log("Contraseña incorrecta, intentelo de nuevo");
-
-  //   } 
-  //   else  {
-  //     console.log("Contraseña correcta, bienvenido");
-  //     break; // Sale del programa
-  //   }  
-  //      console.log("Has agotado tus intentos");
-  //      break;
-  //   }
-  // }
 module.exports = { adivinarContrasena };
 
